@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/card_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    tools:ignore="RtlSymmetry">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:clickable="true"
+        android:layout_width="230dp"
+        android:layout_height="@dimen/card_height"
+        android:paddingBottom="@dimen/activity_vertical_margin_big"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/shape_primary_flat"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/imageCompanyPhoto"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/button_white_circle" />
+        <com.aldieemaulana.kolekta.view.AmTextView
+            app:Amfont="L"
+            android:id="@+id/textSurveyCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="A7890"
+            android:textSize="@dimen/text_extra_small"
+            android:textColor="@drawable/shape_color_secondary"
+            android:background="@drawable/shape_secondary" />
+        <View
+            android:id="@+id/lineDivider"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/colorTextPrimaryLight"
+            android:layout_marginTop="@dimen/component_extra_small"
+            android:layout_marginBottom="@dimen/component_extra_small"
+            android:layout_marginLeft="@dimen/component_medium"
+            android:layout_marginStart="@dimen/component_medium"
+            app:layout_constraintTop_toTopOf="@id/imageCompanyPhoto"
+            app:layout_constraintBottom_toBottomOf="@id/imageCompanyPhoto"
+            app:layout_constraintLeft_toRightOf="@id/imageCompanyPhoto" />
+        <com.aldieemaulana.kolekta.view.AmTextView
+            app:Amfont="R"
+            android:id="@+id/textSurveyCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Social Research"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/colorTextPrimaryLight"
+            android:textSize="@dimen/text_extra_small"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/component_medium"
+            android:layout_marginStart="@dimen/component_medium"
+            app:layout_constraintTop_toTopOf="@id/imageCompanyPhoto"
+            app:layout_constraintBottom_toBottomOf="@id/imageCompanyPhoto"
+            app:layout_constraintLeft_toRightOf="@id/lineDivider"/>
+
+        <com.aldieemaulana.kolekta.view.AmTextView
+            app:Amfont="L"
+            android:id="@+id/textSurveyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visual Designer Life Balance"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_medium"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/component_extra_big"
+            app:layout_constraintTop_toBottomOf="@id/textSurveyCategory"
+            app:layout_constraintLeft_toLeftOf="@id/imageCompanyPhoto"/>
+        <com.aldieemaulana.kolekta.view.AmTextView
+            app:Amfont="R"
+            android:id="@+id/textSurveyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st July 2019"
+            android:textColor="@color/colorTextHint"
+            android:textSize="@dimen/text_extra_small"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/component_extra_small"
+            app:layout_constraintTop_toBottomOf="@id/textSurveyName"
+            app:layout_constraintLeft_toLeftOf="@id/imageCompanyPhoto"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

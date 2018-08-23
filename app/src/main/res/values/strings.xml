@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Kolekta</string>
+    <string name="app_profile">Profile</string>
+    <string name="app_forgot_password">Forgot Password</string>
+
+    <string name="text_hi">Hi!</string>
+    <string name="text_lets_get_started">Let\'s Get Started</string>
+
+    <string name="text_proceed">Proceed</string>
+    <string name="text_email">Email</string>
+    <string name="text_email_address">Email Address</string>
+    <string name="text_password">Password</string>
+    <string name="text_secret_character">Secret Character</string>
+    <string name="text_forgot_password">Forgot Password?</string>
+    <string name="text_register">Register</string>
+    <string name="text_dont_have_an_account">Don\'t have an account?</string>
+    <string name="error_empty_password_n_email">Enter your email address and password</string>
+    <string name="error_empty_email">Enter your email address</string>
+    <string name="error_empty_password">Please enter your secret character</string>
+    <string name="error_invalid_email">An email address must contain a single @ with valid format</string>
+    <string name="error_invalid_password">Password minimum length is 6</string>
+    <string name="text_forgot_password_description">Enter your email below to receive your password reset instructions</string>
+    <string name="text_reset_password">Reset Password</string>
+    <string name="text_register_description">Join with us and enjoy our benefits</string>
+    <string name="text_join">Join</string>
+    <string name="text_full_name">Full Name</string>
+    <string name="text_full_name_hint">John Maulana</string>
+    <string name="text_user_name">Username</string>
+    <string name="text_user_name_hint">john_maulana</string>
+    <string name="text_category">Category</string>
+    <string name="error_empty_field">Please enter all detail data</string>
+    <string name="text_survey">Survey</string>
+    <string name="text_survey_description">Fill our survey and collect a points to get the rewards</string>
+    <string name="text_survey_id">Survey Code</string>
+    <string name="text_survey_id_hint">Enter client survey code</string>
+
+
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission. The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Barcode Reader Sample</string>
+    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+    <string name="text_selected_qr">Reading barcode …</string>
+    <string name="zero">0</string>
+    <string name="text_assigned">Assigned</string>
+    <string name="text_finished">Finished</string>
+    <string name="text_see_all">See All</string>
+
+    <string name="text_user_title">Aldi Maulana</string>
+    <string name="text_user_location">Bogor, Indonesia</string>
+    <string name="text_user_joined">Join on 21 July 2016</string>
+    <string name="text_group">Group</string>
+    <string name="text_basic_information">Basic Information</string>
+    <string name="text_change_plan">Change Plan</string>
+    <string name="text_feedback">Feedback</string>
+    <string name="text_rate_use">Rate Us</string>
+    <string name="text_loading">We are working on it, please wait</string>
+    <string name="text_failure_server_description">Failure to communicate with server.\nPlease try again!</string>
+    <string name="text_failure_server_title">Server Problem!</string>
+    <string name="text_refresh">Refresh</string>
+    <string name="text_empty">This account does not have any data in our server</string>
+    <string name="text_save">Save</string>
+
+</resources>

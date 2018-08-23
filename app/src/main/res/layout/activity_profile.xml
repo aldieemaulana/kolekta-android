@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    tools:context=".activity.ProfileActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar_primary"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_layout"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <requestFocus />
+
+            <LinearLayout
+                android:id="@+id/descriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/activity_vertical_margin_big"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin_big"/>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="-45dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    app:riv_corner_radius="@dimen/button_radius_small"
+                    android:id="@+id/imagePhoto"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_default_user_photo"
+                    android:layout_marginBottom="@dimen/component_big"/>
+                <android.support.v7.widget.AppCompatImageButton
+                    app:layout_constraintLeft_toRightOf="@id/textFullName"
+                    app:layout_constraintTop_toTopOf="@id/textFullName"
+                    android:id="@+id/buttonEdit"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginLeft="@dimen/component_big"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:background="@drawable/button_second_circle"
+                    android:stateListAnimator="@null"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    tools:targetApi="lollipop"
+                    android:layout_marginStart="@dimen/component_big" />
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    app:Amfont="R"
+                    android:id="@+id/textFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_user_title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_title_medium"
+                    android:paddingTop="@dimen/component_extra_small"
+                    android:layout_marginBottom="@dimen/component_extra_small"
+                    android:layout_marginLeft="@dimen/component_extra"
+                    android:layout_marginStart="@dimen/component_extra"
+                    app:layout_constraintLeft_toRightOf="@id/imagePhoto" />
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    app:Amfont="M"
+                    android:id="@+id/textLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_user_location"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_title_small"
+                    android:layout_marginBottom="@dimen/component_small"
+                    android:layout_marginLeft="@dimen/component_extra"
+                    android:layout_marginStart="@dimen/component_extra"
+                    app:layout_constraintTop_toBottomOf="@id/textFullName"
+                    app:layout_constraintLeft_toRightOf="@id/imagePhoto" />
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    app:Amfont="L"
+                    android:id="@+id/textJoinDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/text_user_joined"
+                    android:textColor="@drawable/shape_color_secondary"
+                    android:textSize="@dimen/text_title_small"
+                    android:background="@drawable/shape_secondary"
+                    android:layout_marginBottom="@dimen/component_small"
+                    android:layout_marginLeft="@dimen/component_extra"
+                    android:layout_marginStart="@dimen/component_extra"
+                    app:layout_constraintBottom_toBottomOf="@id/imagePhoto"
+                    app:layout_constraintLeft_toRightOf="@id/imagePhoto" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_extra"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:layout_marginBottom="@dimen/component_small"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin">
+                    <com.aldieemaulana.kolekta.view.AmTextView
+                        android:layout_alignParentLeft="true"
+                        app:Amfont="M"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/text_group"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/text_big"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewGroup"
+                    android:paddingTop="@dimen/component_medium"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="none"
+                    android:nestedScrollingEnabled="false"
+                    android:isScrollContainer="false"
+                    tools:targetApi="lollipop"
+                    android:orientation="horizontal"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    app:reverseLayout="false"
+                    tools:listitem="@layout/item_group_card"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    app:Amfont="M"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_basic_information"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/text_big"
+                    android:layout_marginTop="@dimen/component_extra_big"
+                    android:layout_marginBottom="@dimen/component_small"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewBasic"
+                    android:paddingTop="@dimen/component_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:elevation="0dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="none"
+                    android:nestedScrollingEnabled="false"
+                    android:isScrollContainer="false"
+                    tools:targetApi="lollipop"
+                    android:orientation="vertical"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    app:reverseLayout="false"
+                    tools:listitem="@layout/item_info_list"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height=".5dp" android:background="@color/colorDivider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/activity_vertical_margin_small"
+                android:paddingBottom="@dimen/activity_vertical_margin_small"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_centerInParent="true"
+                    android:id="@+id/buttonRateUs"
+                    android:src="@drawable/ic_rateus"
+                    android:background="@drawable/button_primary_circle"
+                    android:stateListAnimator="@null"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/component_medium"
+                    android:layout_marginLeft="@dimen/component_medium"
+                    tools:targetApi="lollipop" />
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/buttonRateUs"
+                    android:id="@+id/buttonFeedback"
+                    android:src="@drawable/ic_feedback"
+                    android:background="@drawable/button_primary_circle"
+                    android:stateListAnimator="@null"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:targetApi="lollipop"
+                    android:layout_toStartOf="@id/buttonRateUs" />
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/buttonRateUs"
+                    android:id="@+id/buttonPlan"
+                    android:src="@drawable/ic_plan"
+                    android:background="@drawable/button_primary_circle"
+                    android:stateListAnimator="@null"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:targetApi="lollipop"
+                    android:layout_toEndOf="@id/buttonRateUs" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

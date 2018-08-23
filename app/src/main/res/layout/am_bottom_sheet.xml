@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhiteTransparent"
+    android:orientation="vertical"
+    style="@style/AppTheme.RelativeLayout.Parent"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/component_big"
+        android:src="@drawable/vec_server_failure"/>
+
+    <com.aldieemaulana.kolekta.view.AmTextView
+        app:Amfont="M"
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/text_big"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextPrimaryLight"
+        android:text="@string/text_failure_server_title"
+        android:layout_marginBottom="@dimen/component_small" />
+    <com.aldieemaulana.kolekta.view.AmTextView
+        app:Amfont="R"
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AppTheme.RelativeLayout.Horizontal"
+        android:gravity="center"
+        android:textSize="@dimen/text_small"
+        android:textAllCaps="false"
+        android:textColor="@color/colorTextPrimaryLight"
+        android:text="@string/text_failure_server_description"
+        />
+
+    <com.aldieemaulana.kolekta.view.AmButton
+        app:Amfont="M"
+        android:id="@+id/buttonRefresh"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="@dimen/component_extra"
+        android:layout_marginBottom="@dimen/component_extra"
+        android:background="@drawable/button_accent"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:textSize="@dimen/text_small"
+        android:text="@string/text_refresh"
+        android:textColor="@color/colorWhite"
+        tools:targetApi="lollipop" />
+
+</LinearLayout>

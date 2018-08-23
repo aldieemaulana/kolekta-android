@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    tools:context=".activity.auth.RegisterActivity">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/toolbar_secondary"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin_big"
+            android:gravity="center">
+            <requestFocus />
+            <com.aldieemaulana.kolekta.view.AmTextView
+                app:Amfont="B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_register"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_title_extra"/>
+
+            <com.aldieemaulana.kolekta.view.AmTextView
+                app:Amfont="R"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_register_description"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_title_medium"
+                android:layout_marginTop="@dimen/component_small"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_big"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/component_big">
+                <LinearLayout
+                    android:background="@drawable/input_primary_flat"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.aldieemaulana.kolekta.view.AmTextView
+                        style="@style/AppTheme.TextLabelInput"
+                        app:Amedit="@id/textUsername"
+                        app:Amfont="M"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_user_name" />
+
+                    <com.aldieemaulana.kolekta.view.AmEditText
+                        app:Amfont="R"
+                        android:id="@+id/textUsername"
+                        style="@style/AppTheme.TextInput"
+                        android:hint="@string/text_user_name_hint"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textShortMessage"/>
+                </LinearLayout>
+                <View android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".03"/>
+                <LinearLayout
+                    android:background="@drawable/input_primary_flat"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.aldieemaulana.kolekta.view.AmTextView
+                        style="@style/AppTheme.TextLabelInput"
+                        app:Amedit="@id/textFullName"
+                        app:Amfont="M"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_full_name" />
+
+                    <com.aldieemaulana.kolekta.view.AmEditText
+                        app:Amfont="R"
+                        android:id="@+id/textFullName"
+                        style="@style/AppTheme.TextInput"
+                        android:hint="@string/text_full_name_hint"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:inputType="textPersonName"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/input_primary_flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/component_big">
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    style="@style/AppTheme.TextLabelInput"
+                    app:Amedit="@id/textEmail"
+                    app:Amfont="M"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_email" />
+
+                <com.aldieemaulana.kolekta.view.AmEditText
+                    app:Amfont="R"
+                    android:id="@+id/textEmail"
+                    style="@style/AppTheme.TextInput"
+                    android:hint="@string/text_email_address"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:inputType="textEmailAddress"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/input_primary_flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/component_big">
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    style="@style/AppTheme.TextLabelInput"
+                    app:Amedit="@id/textPassword"
+                    app:Amfont="M"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_password" />
+
+                <com.aldieemaulana.kolekta.view.AmEditText
+                    app:Amfont="R"
+                    android:id="@+id/textPassword"
+                    style="@style/AppTheme.TextInput"
+                    android:hint="@string/text_secret_character"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/input_primary_flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/component_big">
+                <com.aldieemaulana.kolekta.view.AmTextView
+                    style="@style/AppTheme.TextLabelInput"
+                    app:Amfont="M"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_category" />
+
+                <com.aldieemaulana.kolekta.view.AmSpinner
+                    app:Amfont="R"
+                    android:id="@+id/textCategory"
+                    style="@style/AppTheme.SpinnerInput"
+                    android:dropDownVerticalOffset="35dp"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_marginRight="-8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:entries="@array/category_list"/>
+            </LinearLayout>
+
+            <com.aldieemaulana.kolekta.view.AmTextView
+                app:Amfont="L"
+                android:layout_marginTop="@dimen/component_small"
+                android:layout_marginBottom="@dimen/component_small"
+                android:id="@+id/textError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorError"
+                android:textSize="@dimen/text_small"
+                android:layout_gravity="center"/>
+
+            <com.aldieemaulana.kolekta.view.AmButton
+                app:Amfont="M"
+                android:id="@+id/buttonJoin"
+                android:stateListAnimator="@null"
+                android:layout_marginTop="@dimen/component_extra"
+                android:layout_marginBottom="@dimen/component_extra"
+                style="@style/AppTheme.ButtonInput.Flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_join"
+                android:textColor="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

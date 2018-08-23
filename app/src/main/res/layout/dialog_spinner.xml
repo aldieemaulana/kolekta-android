@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/input_primary_flat"
+    android:orientation="vertical">
+
+    <com.aldieemaulana.kolekta.view.AmTextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:Amfont="M"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/text_medium"
+        android:layout_marginBottom="@dimen/component_extra_big"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        style="@style/AppTheme.RelativeLayout.Horizontal"/>
+
+    <android.support.v7.widget.RecyclerView
+        style="@style/AppTheme.RelativeLayout.Parent"
+        android:paddingBottom="@dimen/component_medium"
+        android:id="@+id/listViewDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorListBackgroundWhite"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:orientation="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:reverseLayout="false"
+        android:nestedScrollingEnabled="false"
+        android:isScrollContainer="false"
+        tools:listitem="@layout/list_dialog"
+        tools:targetApi="lollipop" />
+
+</LinearLayout>
