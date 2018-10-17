@@ -13,6 +13,7 @@ import com.aldieemaulana.kolekta.model.Page
 import com.aldieemaulana.kolekta.model.Question
 import com.aldieemaulana.kolekta.model.Survey
 import com.aldieemaulana.kolekta.model.request.Results
+import com.aldieemaulana.kolekta.utils.Anims
 import com.aldieemaulana.kolekta.utils.Constants
 import com.aldieemaulana.kolekta.utils.Texts
 import com.aldieemaulana.kolekta.utils.Views
@@ -142,21 +143,32 @@ class DetailActivity : BaseActivity() {
             val resultData = Results.Request(surveyId, results)
 
             if(validate) {
+                setLoading(true)
                 disposable = result.store(App.TOKEN, surveyId, resultData)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(
                                 { result ->
                                     AlLog.e("${result.data}")
+                                    setLoading(false)
                                 },
                                 { error ->
                                     AlLog.e("${error.message}")
+                                    setLoading(false)
 
                                 }
                         )
             }
         }
 
+    }
+
+    private fun setLoading(state: Boolean) {
+        if(state) {
+            progressLayout.visibility = View.VISIBLE
+        }else{
+            progressLayout.visibility = View.GONE
+        }
     }
 
     private fun setToolbar() {
@@ -170,6 +182,7 @@ class DetailActivity : BaseActivity() {
     private fun setError(text: String) {
         textError.text  = text
         Texts().shakeTextView(textError, context)
+        setLoading(false)
     }
 
 

@@ -25,6 +25,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:background="@drawable/button_white_circle" />
+
         <com.aldieemaulana.kolekta.view.AmTextView
             app:Amfont="L"
             android:id="@+id/textSurveyCode"

@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#FF222833</color>
     <color name="colorPrimaryDark">#FF202227</color>
+    <color name="colorPrimaryDarkTransparent">#c0202227</color>
     <color name="colorLabel">#2e79f4</color>
     <color name="colorLabelTransparent">#e9f3ff</color>
     <color name="colorLabelActive">#01579b</color>
